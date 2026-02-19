@@ -1,30 +1,152 @@
-# Phase 2 deliverables
+# 🍳 EasyChef
 
-In this part, you will implement the Django backend of Easy Chef. All user stories are implemented with one or more REST APIs. Your APIs should not have any template or HTML response.
+EasyChef is a full-stack recipe management web application that allows users to create, search, rate, and manage recipes with authentication, favourites, and shopping lists.
 
-The project should run in a python virtual environment, with all the packages listed in the requirements file. Ideally, your backend server should not go through many changes at the next part (this will not happen in practice).
+Built as part of CSC309 Phase 2 and designed using Django REST Framework with JWT authentication.
 
-You should implement proper authentication and authorization for the user stories as well. All your API views must work with the Token auth. You can also support session auth, but it's optional.
+---
 
-Note 1: As potentially ambiguous as the handout gets, you can ask your questions on Piazza or discuss them with TAs at mentor sessions.
+## 🚀 Features
 
-Note 2: It is recommended that you replace the Django's default User model with a custom model that meets the requirements of this handout. Your new model can extend the default one, or have a one-to-one relation with it. [These instructions](https://docs.djangoproject.com/en/4.1/topics/auth/customizing/#substituting-a-custom-user-model) helps Django recognize your custom model as the auth model so that all User-specific functionalities (sessions, tokens, etc.) still work.
+### 👤 User Management
+- Register using phone number authentication
+- Login with JWT tokens
+- View and edit profile
+- Custom Django user model
 
-Note 3: All API views that return a potentially long list of items (e.g., search results, my recipes, recommended recipes, etc.) must be paginated so that a reasonable amount of data is returned in one response. Read more information [here](https://www.django-rest-framework.org/api-guide/pagination/).
+### 🍲 Recipe Management
+- Create recipes with:
+  - Cuisine type
+  - Multiple diets
+  - Ingredients
+  - Instructions
+- Edit and delete recipes
+- View recipe details
 
-Note 4: Your need to handle the autocomplete functionality at backend (as opposed to sending all the ingredients to the frontend and letting the browser search through it). 
+### ❤️ Social Features
+- Like / Unlike recipes
+- Comment on recipes
+- Favourite recipes
+- Rate recipes (1–5 stars)
 
+### 🛒 Shopping List
+- Add recipes to shopping list
+- View combined ingredient totals
 
-# Submission
+### 🔍 Search
+- Filter recipes by:
+  - Title
+  - Cuisine
+  - Diet
+  - Ingredient
+  - Owner name
+  - Prep time
 
-You should push your entire Django project to your repo for P2 on Gitlab, accompanied by a startup.sh script, a run.sh script, a docs.pdf file, and a postman.json collection. These files should be located in the root folder of your repository. Find out your group's repo by logging into the [IBS](https://q.utoronto.ca/courses/291539/pages/ibs-submissions-grades-and-interviews). Note that your repo for P2 is different from that of P1.
+---
 
-The startup script should run any preparation needed for your code to run in a new environment. It should create the virtual environment, install all required packages with pip, and run all migrations. The run script should start your server. Finally, your documentation must include your design of models, as well as the full list of all API endpoints, a short description, their methods, and the payloads. You can use packages that automatically generate the API docs from your code. 
+## 🛠 Tech Stack
 
-The TA will send requests based on the information you provide on that document. Therefore, it is important to have a usable and clear document. The postman collection must be an export of all the APIs that are importable into Postman. The TA will use Postman to test your APIs, so it is important that your collection is comprehensive, well-organized, and self-explanatory. All the POST data, headers, and GET query parameters must be pre-filled and editable in that collection.
+- **Backend:** Django + Django REST Framework
+- **Authentication:** JWT Tokens
+- **Database:** SQLite / PostgreSQL
+- **API Testing:** Postman
+- **Languages:** Python
 
-Note: Before submitting, make sure that your startup and run scripts work well on a Ubuntu (preferably 20.04) machine, and your collection can be imported into Postman without any issues. The TAs will run your application on clean instances of that environment. If you have worked with another operating system, it is your absolute responsibility to double-check that your project works fine within the Ubuntu environment as well.
+---
 
-Note 2: You can assume that python3.10, pip and virtualenv (accessible via python3.10 -m) is already installed on the test machines. So do not try to install them in your startup script.
+## 📂 API Endpoints
 
-Note 3: Make sure that you postman collection uses environment variables for auth tokens. Otherwise, the TAs would have to copy-paste the token every single time.
+### Accounts
+
+| Endpoint | Method | Description |
+|-----------|--------|-------------|
+| `/accounts/login/` | POST | Login user |
+| `/accounts/register/` | POST | Register new user |
+| `/accounts/profile/` | GET | Get logged-in user info |
+| `/accounts/edit-profile/<pk>/` | PUT | Update profile |
+
+Example: login requires phone + password in form-data. :contentReference[oaicite:0]{index=0}
+
+---
+
+### Recipes
+
+| Endpoint | Method | Description |
+|-----------|--------|-------------|
+| `/recipes/create/` | POST | Create recipe |
+| `/recipes/details/<id>/` | GET | Recipe details |
+| `/recipes/edit/<id>/` | PUT | Edit recipe |
+| `/recipes/delete/<id>/` | DELETE | Delete recipe |
+| `/recipes/search/` | GET | Search recipes |
+| `/recipes/create/comment/<id>/` | POST | Comment |
+| `/recipes/like/<id>/` | POST | Like/Unlike |
+| `/recipes/favourite/<id>/` | POST | Favourite |
+| `/recipes/rate/<id>/` | POST | Rate recipe |
+
+These endpoints allow full CRUD operations and user interaction with recipes. :contentReference[oaicite:1]{index=1}
+
+---
+
+### Shopping List
+
+| Endpoint | Method | Description |
+|-----------|--------|-------------|
+| `/recipes/add-to-shopping-list/<id>/` | POST | Add recipe ingredients |
+| `/recipes/get-shopping-list/` | GET | View shopping list |
+
+The shopping list aggregates ingredients from selected recipes. :contentReference[oaicite:2]{index=2}
+
+---
+
+## 🧠 Database Models
+
+### Custom User Model
+- Phone number authentication
+- Avatar image support
+- Extends Django `AbstractUser`
+
+Uses phone as the username field for authentication. :contentReference[oaicite:3]{index=3}
+
+---
+
+### Recipe Model Includes
+- Title
+- Description
+- Cuisine
+- Image
+- Prep time
+- Servings
+- Owner
+
+Additional models:
+- Diet
+- Ingredient
+- Instruction
+- Comment
+- Like
+- Favourite
+- ShoppingList
+- Rate :contentReference[oaicite:4]{index=4}
+
+---
+
+## 🧪 Example Workflow
+
+1. Register account
+2. Login and get JWT token
+3. Create recipe
+4. Add comments or likes
+5. Favourite recipes
+6. Add to shopping list
+7. Search recipes by filters
+
+---
+
+## 🖥 How to Run Locally
+
+```bash
+git clone https://github.com/NofelYazdani/Easy-Chef.git
+cd Easy-Chef
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
