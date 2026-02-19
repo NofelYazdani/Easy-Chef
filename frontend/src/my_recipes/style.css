@@ -1,0 +1,2169 @@
+body {
+    background: #D8D8D8;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased; 
+  }
+  * {
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+  
+  * {
+    outline: none; }
+    *:focus {
+      outline: none; }
+  
+      #mainNav {
+        min-height: 3.5rem;
+      }
+      #mainNav .navbar-toggler {
+        font-size: 80%;
+        padding: 0.75rem;
+        color: #568203;
+        border: 1px solid #568203;
+      }
+      #mainNav .navbar-toggler:focus {
+        outline: none;
+      }
+      #mainNav .navbar-brand {
+        color: #568203;
+        font-weight: 700;
+        padding: 0.9rem 0;
+      }
+      #mainNav .navbar-nav .nav-item:hover {
+        color: fade(#568203, 80%);
+        outline: none;
+        background-color: transparent;
+      }
+      #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+        outline: none;
+        background-color: transparent;
+      }
+      @media (min-width: 992px) {
+        #mainNav {
+          padding-top: 0;
+          padding-bottom: 0;
+          border-bottom: none;
+          background-color: transparent;
+          transition: background-color 0.3s ease-in-out;
+        }
+        #mainNav .navbar-brand {
+          padding: 0.5rem 0;
+          color: #008631;
+        }
+        #mainNav .navbar-brand:hover {
+            color: #5cb85c;
+          }
+        #mainNav .nav-link {
+          transition: none;
+          padding: 2rem 1.5rem;
+          color: #008631;
+        }
+        #mainNav .nav-link:hover {
+          color: #5cb85c;
+        }
+        #mainNav .nav-link:active {
+          color: #fff;
+        }
+        #mainNav.navbar-shrink {
+          background-color: #fff;
+        }
+        #mainNav.navbar-shrink .navbar-brand {
+          color: #000;
+        }
+        #mainNav.navbar-shrink .nav-link {
+          color: #000;
+          padding: 1.5rem 1.5rem 1.25rem;
+          border-bottom: 0.25rem solid transparent;
+        }
+        #mainNav.navbar-shrink .nav-link:hover {
+          color: #008631;
+        }
+        #mainNav.navbar-shrink .nav-link:active {
+          color: #568203;
+        }
+        #mainNav.navbar-shrink .nav-link.active {
+          color: #568203;
+          outline: none;
+          border-bottom: 0.25rem solid #568203;
+        }
+      }
+  
+  a {
+    text-decoration: none;
+    transition: all ease .4s; }
+    a:focus {
+      outline: none;
+      outline-offset: 0; }
+    a:hover, a:focus {
+      text-decoration: none; }
+  
+  
+  img {
+    max-width: 100%;
+    transition: all ease .4s;
+    user-select: none; }
+  
+  iframe {
+    display: block;
+    width: 100%;
+    border: none; }
+  
+  video {
+    display: block;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    background: #D8D8D8; }
+  
+  audio, canvas, progress, video {
+    vertical-align: middle; }
+  
+  button {
+    outline: none;
+    outline-offset: 0;
+    transition: all ease .4s; }
+    button:focus {
+      outline: none;
+      outline-offset: 0;
+      transition: all ease .4s; }
+  
+  hr {
+    border-color: #E8E8E8; }
+  
+  
+  .hr-11, hr.hr-11:not([size]) {
+    height: 11px;
+    opacity: 1; }
+  
+  label {
+    cursor: pointer; }
+    label.disable {
+      cursor: none;
+      opacity: 0.3; }
+  
+  .has-unalignment-cards [class*="col-"] .card {
+    height: auto; }
+  
+  .vertical-none {
+    vertical-align: unset; }
+  
+  .mw-auto {
+    max-width: none; }
+  
+  .direction-rtl {
+    direction: rtl; }
+  
+  .tastebite-section {
+    padding: 70px 0; }
+  
+  
+  /* 2. Tastebite Components CSS */
+  /* 2. 1. Tastebite Colors CSS */
+  /* 2. 1. 1. Tastebite Selection Color CSS  */
+  ::selection, ::-webkit-selection, ::-moz-selection, ::-o-selection, ::-ms-selection {
+    background: #575757;
+    color: #fff; }
+  
+  select::-ms-expand {
+    display: none; }
+  
+  /* 2. 1. 2. Tastebite Default Hover Colors CSS  */
+  a {
+    color: #000; }
+    a:hover, a:focus {
+      color: #568203; }
+  
+  
+  
+  .btn-success, .btn-primary {
+    color: #fff !important; }
+  
+  /* 2. 1. 3. Tastebite Default Backgrounds CSS  */
+  .bg-primary, .btn-primary, .badge-primary {
+    background-color: #568203; }
+    
+  
+  .bg-success, .btn-success, .badge-success {
+    background-color: #568203; }
+  
+  .bg-secondary, .btn-secondary, .badge-secondary {
+    background-color: #e4f1ff; }
+  
+  .bg-warning, .btn-warning, .badge-warning {
+    background-color: #ff964a; }
+  
+  .bg-primary-light, .badge-primary-light {
+    background-color: #ffd8ca; }
+  
+  .bg-light-gray, .badge-light-gray {
+    background-color: #e9e9e9; }
+  
+  .bg-dark-gray, .badge-dark-gray {
+    background-color: #808080; }
+  
+  .bg-lightest-gray, .badge-lightest-gray {
+    background-color: #f9f9f9 !important; }
+  
+  .bg-dark, .badge-dark {
+    background-color: #575757; }
+  
+  .bg-black, .badge-black {
+    background-color: #000; }
+  
+  .bg-black-900, .badge-black-900 {
+    background-color: #2a2a2a; }
+  
+  /* 2. 1. 4. Tastebite Default Borders CSS  */
+  .border, .border-top, .border-left, .border-bottom, .border-right {
+    border-color: rgba(0, 0, 0, 0.2); }
+  
+  .border-gray-200 {
+    border-color: #E8E8E8; }
+  
+  .btn-primary {
+    border-color: #568203; }
+  
+  .btn-secondary {
+    border-color: #e4f1ff; }
+  
+  .btn-warning {
+    border-color: #ff964a; }
+  
+  /* 2. 1. 5. Tastebite Outline Shades CSS  */
+  .outline-primary {
+    border: 1px solid #568203; }
+  
+  
+  .outline-secondary {
+    border: 1px solid #e4f1ff; }
+  
+  .outline-warning {
+    border: 1px solid #ff964a; }
+  
+  .outline-black {
+    border: 1px solid #000; }
+  
+  .outline-dark-gray {
+    border: 1px solid #808080; }
+  
+  .outline-light-gray {
+    border: 1px solid #e9e9e9; }
+  
+  .outline-gray-200 {
+    border: 1px solid #E8E8E8; }
+  
+  /* 2. 1. 6. Tastebite Background Shades CSS  */
+  .color-shade {
+    width: 120px;
+    height: 120px;
+    margin: auto; }
+  
+  .color-shade-lg {
+    width: 170px;
+    height: 170px;
+    margin: auto; }
+  
+  /* 2. 1. 7. Tastebite Border Transparency CSS  */
+  .text-primary {
+    color: #568203; }
+  
+  .text-success {
+    color: #568203; }
+  
+  .text-secondary {
+    color: #568203; }
+  
+  .text-warning {
+    color: #568203; }
+  
+  .text-gray {
+    color: #8e8e8e; }
+  
+  .text-gray-300 {
+    color: #7F7F7F; }
+  
+  .text-gray-100 {
+    color: #D8D8D8; }
+  
+  .text-dark-300 {
+    color: #303030; }
+  
+  .text-orange {
+    color: #568203; }
+  
+  /* 2. 1. 8. Tastebite Color Transparency CSS */
+  .text-trans-70 {
+    color: rgba(0, 0, 0, 0.7); }
+  
+  /* 2. 1. 9. Tastebite Gradient Background Transparency CSS */
+  .gradient-black-trans {
+    background: #000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0032213569) 50%, rgba(0, 0, 0, 0.5) 100%);
+    /* IE6-9 */ }
+  
+  /* 2. 1. 10. Tastebite Text Underline Color CSS */
+  .tstbite-underline {
+    text-decoration-color: #568203;
+    -webkit-text-underline-position: under;
+    -ms-text-underline-position: below;
+    text-underline-position: under; }
+  
+  /* 2. 1. 11. Tastebite Background Transparency CSS */
+  .bg-black-trans-48 {
+    background-color: rgba(0, 0, 0, 0.48); }
+  
+  /* 2. 2. Tastebite Font Family CSS  */
+  body {
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #000;
+    background-color: #fff; }
+  
+  .playfair-font {
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important; }
+  
+  .inter-font {
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important; }
+  
+  /* 2. 3. Tastebite Font Weights CSS  */
+  h1, .h1, .h1, h2, .h2, .h2, h3, .h3, .h3, h4, .h4, .h4, h5, .h5, .h5, h6, .h6, .h6 {
+    font-weight: 700;
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  
+  .font-weight-medium {
+    font-weight: 500 !important; }
+  
+  .font-weight-regular {
+    font-weight: 400 !important; }
+  
+  .font-weight-light {
+    font-weight: 300 !important; }
+  
+  .font-weight-thin {
+    font-weight: 100 !important; }
+  
+  .font-weight-semibold {
+    font-weight: 600 !important; }
+  
+  /* 2. 4. Tastebite Font Sizes CSS  */
+  body, big.font-size-16, .font-size-16 {
+    font-size: 16px; }
+  
+  .font-size-100 {
+    font-size: 100px;
+    line-height: 100px; }
+  
+  .font-size-90 {
+    font-size: 90px;
+    line-height: 90px; }
+  
+  h1, .h1, .h1 {
+    font-size: 76px; }
+  
+  h2, .h2, .h2 {
+    font-size: 60px; }
+  
+  h3, .h3, .h3 {
+    font-size: 50px; }
+  
+  h4, .h4, .h4 {
+    font-size: 45px; }
+  
+  h5, .h5, .h5 {
+    font-size: 36px; }
+  
+  h6, .h6, .h6 {
+    font-size: 30px; }
+  
+  .f-size-32 {
+    font-size: 32px; }
+  
+  .f-size-28 {
+    font-size: 28px; }
+  
+  .f-size-24 {
+    font-size: 24px; }
+  
+  .f-size-20 {
+    font-size: 20px; }
+  
+  big, .big {
+    font-size: 18px; }
+  
+  .f-size-16 {
+    font-size: 16px; }
+  
+  .f-size-14 {
+    font-size: 14px; }
+  
+  small, .small, .small {
+    font-size: 12px !important; }
+  
+  caption, .caption {
+    font-size: 14px !important; }
+  
+  .tiny, .avatar-name small, .avatar-name .small {
+    font-size: 10px; }
+  
+  /* 2. 5. Tastebite Outline Buttons CSS  */
+  .btn {
+    font-weight: 500; }
+  
+  .btn-sm, .btn-group-sm > .btn {
+    font-size: 14px;
+    padding: 2px 20px;
+    border-radius: 3px; }
+  
+  .btn-xl {
+    height: 76px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 62px; }
+  
+  .btn-outline-dark {
+    background-color: transparent;
+    border-color: #000;
+    color: #000; }
+  
+  
+  /* 2. 6. Tastebite Rounded CSS  */
+  .rounded-2 {
+    border-radius: 2px; }
+  
+  .rounded-4 {
+    border-radius: 4px; }
+  
+  .rounded-6 {
+    border-radius: 6px; }
+  
+  .rounded-12 {
+    border-radius: 12px; }
+  
+  .rounded-16 {
+    border-radius: 16px; }
+  
+  .rounded-24 {
+    border-radius: 24px; }
+  
+  .rounded-top-3 {
+    border-radius: 3px 3px 0 0; }
+  
+  .rounded-bottom-3 {
+    border-radius: 0 0 3px 3px; }
+  
+  .rounded-left-3 {
+    border-radius: 3px 0 0 3px; }
+  
+  .rounded-right-3 {
+    border-radius: 0 3px 3px 0; }
+  
+  .rounded-top-6 {
+    border-radius: 6px 6px 0 0; }
+  
+  .rounded-bottom-6 {
+    border-radius: 0 0 6px 6px; }
+  
+  .rounded-left-6, .rounded-md-left-6 {
+    border-radius: 6px 0 0 6px; }
+  
+  .rounded-right-6 {
+    border-radius: 0 6px 6px 0; }
+  
+  .rounded-top-12 {
+    border-radius: 12px 12px 0 0; }
+  
+  /* 2. 7. Tastebite Shadow CSS  */
+  .shadow-24 {
+    box-shadow: 0 18px 24px rgba(0, 0, 0, 0.03); }
+  
+  .shadow-17 {
+    box-shadow: 0 9px 17px rgba(0, 0, 0, 0.07); }
+  
+  /* 2. 8. Tastebite Component List CSS  */
+  .component-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px; }
+    .component-list li {
+      padding: 15px 20px; }
+  
+  /* 2. 9. Tastebite Group List CSS  */
+  .group-list, .component-list.group-list {
+    margin: 0; }
+    .group-list li, .component-list.group-list li {
+      padding: 15px 0; }
+      .group-list li + li, .component-list.group-list li + li {
+        margin-left: -25px;
+        border: none; }
+    .group-list .color-shade, .component-list.group-list .color-shade {
+      border: 10px solid #fff; }
+  
+  .tstbite-section {
+    padding: 75px 0; }
+  
+  /* 2. 10. Tastebite Information List CSS  */
+  .information-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 35px -20px; }
+    .information-list li {
+      padding: 0 20px;
+      color: #000;
+      line-height: 18px;
+      margin: 8px 0;
+      font-size: 18px;
+      font-weight: 300; }
+      .information-list li + li {
+        border-left: 1px solid #000; }
+  
+  /* 2. 11. Tastebite Input CSS  */
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none; }
+  
+  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #000; }
+  
+  .input-group > .input-group-append > .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  
+  .custom-input-group {
+    border-radius: 3px;
+    overflow: hidden; }
+    .custom-input-group .form-control {
+      height: 68px;
+      border: none;
+      padding-left: 25px;
+      font-size: 16px; }
+      .custom-input-group .form-control:focus {
+        box-shadow: none; }
+    .custom-input-group .input-group-append {
+      border: 2px solid #fff; }
+      .custom-input-group .input-group-append .btn {
+        padding: 5px 42px;
+        font-weight: 600;
+        font-size: 18px;
+        height: 100%; }
+  
+  .form-group {
+    margin-bottom: 1rem; }
+    .form-group.custom-form-group {
+      margin-bottom: 38px; }
+    .form-group label {
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #7F7F7F;
+      margin-bottom: 0.5rem; }
+    .form-group .form-control-box {
+      position: relative; }
+    .form-group .form-control {
+      border-radius: 0;
+      border: none;
+      height: 48px;
+      padding-left: 40px;
+      font-size: 14px;
+      color: #7F7F7F;
+      font-weight: 400;
+      border-bottom: 2px solid #E8E8E8; }
+      .form-group .form-control:focus {
+        box-shadow: none;
+        border-color: #000;
+        color: #000; }
+        .form-group .form-control:focus ~ .form-icon svg path {
+          fill: #000; }
+    .form-group .form-icon {
+      position: absolute;
+      top: 10px;
+      left: 6px; }
+  
+  /* 2. 12. Tastebite Badge CSS */
+  .circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle; }
+  
+  .circle-lg {
+    width: 40px;
+    height: 40px; }
+  
+  .circle-xl {
+    width: 255px;
+    height: 255px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto; }
+  
+  .circle-md {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto; }
+  
+  .circle-sm {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto; }
+  
+  .tstbite-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle; }
+  
+  .tstbite-avatar.lg {
+    width: 80px;
+    height: 80px; }
+  
+  .badge-lg {
+    padding-top: 8px;
+    padding-bottom: 8px; }
+  
+  .badge.circle-lg {
+    width: 60px;
+    height: 60px; }
+  
+  .badge.circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; }
+  
+  
+  /* 2. 14. Tastebite Select Box CSS */
+  select.form-control, select {
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 34px;
+    min-height: 34px;
+    border-color: #000;
+    border-radius: 4px;
+    min-width: 144px;
+    line-height: 20px;
+    color: #000;
+    padding-left: 8px;
+    padding-right: 30px; }
+  
+  select::-ms-expand {
+    display: none; }
+  
+  .sort-filter {
+    float: right;
+    padding-bottom: 20px; }
+    .sort-filter span {
+      font-size: 0; }
+    .sort-filter .form-control {
+      width: 145px; }
+  
+  /* 2. 15. Tastebite Modals CSS */
+  .modal-content {
+    max-width: 471px;
+    border-color: #E8E8E8;
+    padding: 35px;
+    position: relative; }
+    .modal-content.full {
+      max-width: 100%; }
+  
+  button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0; }
+  
+  .close {
+    opacity: 1;
+    position: absolute;
+    top: 20px;
+    right: 20px; }
+    .close :hover svg path {
+      fill: #568203; }
+  
+  .close:not(:disabled):not(.disabled):hover, .close:not(:disabled):not(.disabled):focus {
+    opacity: 1; }
+  
+  .modal-body {
+    padding-top: 30px;
+    padding-bottom: 0; }
+  
+  .login-social {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px; }
+    .login-social li {
+      padding: 8px;
+      width: 50%; }
+      .login-social li a {
+        background-color: #F3F3F3;
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 4px;
+        padding: 12px 10px; }
+        .login-social li a img {
+          margin-right: 6px;
+          margin-top: -2px; }
+        .login-social li a.facebook {
+          color: #3B5998; }
+  
+  .login-footer {
+    margin-top: 60px; }
+    .login-footer p {
+      margin-bottom: 0;
+      font-weight: 300; }
+      .login-footer p a {
+        color: #568203;
+        font-weight: 500; }
+        .login-footer p a:hover {
+          color: #000; }
+  
+  /* 2. 16. Tastebite Star Ratings CSS */
+  .fabrx-ratings:not(:checked) > input {
+    display: none; }
+  
+  .rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    margin: 5px 5px 10px 0;
+    transition: all ease .4s; }
+  
+  .has-rating:not(:checked) > label {
+    background-repeat: no-repeat;
+    background-size: contain; }
+    .has-rating:not(:checked) > label:hover {
+      background-repeat: no-repeat;
+      background-size: contain; }
+      .has-rating:not(:checked) > label:hover ~ label {
+        background-repeat: no-repeat;
+        background-size: contain; }
+  .has-rating > input:checked + label:hover, .has-rating > input:checked ~ label:hover {
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.8; }
+    .has-rating > input:checked + label:hover ~ label, .has-rating > input:checked ~ label:hover ~ label {
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.8; }
+  .has-rating > label:hover ~ input:checked ~ label {
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.8; }
+  .has-rating > input:checked ~ label {
+    background-repeat: no-repeat;
+    background-size: contain; }
+  
+  /* 2. 17. Tastebite Icons CSS */
+  .icons-list.component-list {
+    margin: 0 -20px; }
+    .icons-list.component-list li {
+      padding: 25px 20px;
+      min-width: 76px; }
+      .icons-list.component-list li + li {
+        border: none; }
+  
+  /* 2. 18. Tastebite Masonry CSS */
+  .tstbite-masonry {
+    margin: 0 -10px; }
+    .tstbite-masonry .masonry-item {
+      padding: 10px;
+      float: left;
+      width: 33.33%; }
+  
+  /* 2. 19. Tastebite Media List CSS */
+  .media {
+    display: flex;
+    align-items: flex-start; }
+  
+  .media-body {
+    flex: 1; }
+  
+  /* 3. Tastebite Home Page CSS */
+  .tstbite-arrow {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff; }
+    .tstbite-arrow:hover {
+      background-color: #568203; }
+      .tstbite-arrow:hover svg, .tstbite-arrow:hover svg * {
+        fill: #fff; }
+  
+  /* 3. 1. Tastebite Header CSS */
+  .tstbite-header {
+    padding: 24px 0; }
+  
+  .tstbite-category-title {
+    font-weight: 600;
+    color: #000;
+    font-size: 20px;
+    margin-top: 8px; }
+  
+  
+  /* 3. 3. Tastebite Footer CSS */
+  .tstbite-footer h6.caption, .tstbite-footer .caption.h6 {
+    cursor: pointer; }
+  .tstbite-footer ul {
+    padding-left: 0; }
+    .tstbite-footer ul li {
+      list-style: none; }
+      .tstbite-footer ul li a {
+        color: #7F7F7F;
+        font-weight: 400;
+        font-size: 14px; }
+        .tstbite-footer ul li a:hover {
+          color: #568203; }
+      .tstbite-footer ul li + li {
+        padding-top: 6px; }
+  
+  /* 3. 4. Tastebite Instagram List CSS */
+  .tstbite-instagram-list {
+    margin: 0 -4px; }
+  
+  .tstbite-instagram-info {
+    line-height: 18px; }
+    .tstbite-instagram-info + .tstbite-instagram-info {
+      margin-left: 35px; }
+  
+  /* 3. 5. Tastebite Social CSS */
+  .tstbite-social a + a {
+    margin-left: 25px; }
+  
+  /* 3. 6. Tastebite Join Section CSS */
+  .tstbite-join-section .custom-input-group .form-control {
+    height: 59px; }
+  
+  /* 3. 7. Tastebite Profile CSS */
+  .tstbite-profile {
+    margin-top: 60px;
+    margin-bottom: 20px; }
+    .tstbite-profile > img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin-top: -60px; }
+  
+  /* 3. 7. Tastebite Image Animation CSS */
+  .tstbite-animation {
+    display: block;
+    overflow: hidden; }
+    .tstbite-animation img {
+      transform: scale(1);
+      transition: all ease .8s; }
+    .tstbite-animation:hover img {
+      transform: scale(1.1); }
+  
+  /* 3. 8. Tastebite Card CSS */
+  .tstbite-card {
+    position: relative; }
+    .tstbite-card:hover figcaption a {
+      color: #568203; }
+    .tstbite-card:hover .tstbite-animation img {
+      transform: scale(1.1); }
+  
+  .tstbite-delicious {
+    border: 1px solid #D8D8D8; }
+    .tstbite-delicious h6, .tstbite-delicious .h6 {
+      min-height: 50px; }
+  
+  /* 3. 9. Tastebite Overlay CSS */
+  .tstbite-overlay .card-img-overlay .tstbite-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60px; }
+  .tstbite-overlay .card-overlay-sm .card-img-overlay .tstbite-container {
+    bottom: 30px; }
+  
+  /* 3. 10. Tastebite Swiper Slider CSS */
+  .swiper-container .swiper-button-prev, .swiper-container .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-repeat: no-repeat;
+    background-position: center; }
+    .swiper-container .swiper-button-prev:hover, .swiper-container .swiper-button-next:hover {
+      background-color: #fff; }
+    .swiper-container .swiper-button-prev:after, .swiper-container .swiper-button-next:after {
+      display: none; }
+  .swiper-container .swiper-button-next {
+    right: 0;
+    left: auto;
+    background-repeat: no-repeat; }
+  
+  .slider-no-current {
+    font-size: 0; }
+  
+  /* 4. Tastebite Search Page CSS */
+  .tstbite-search {
+    visibility: hidden;
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    opacity: 0;
+    padding-bottom: 25px;
+    transition: all ease .4s; }
+    .tstbite-search.active {
+      opacity: 1;
+      visibility: visible; }
+  
+  .search-results {
+    display: none; }
+  
+  .tstbite-search-list a {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #E8E8E8;
+    align-items: center;
+    padding: 8px 0; }
+    .tstbite-search-list a figure {
+      margin-bottom: 0; }
+    .tstbite-search-list a .tstbite-search-name {
+      width: calc(100% - 65px);
+      padding-left: 15px; }
+      .tstbite-search-list a .tstbite-search-name strong {
+        display: block;
+        line-height: 18px; }
+      .tstbite-search-list a .tstbite-search-name span {
+        display: block; }
+  
+  .search-box {
+    border-bottom: 1px solid #000;
+    padding: 8px 0;
+    margin-bottom: 10px; }
+    .search-box .form-control {
+      border: none;
+      border-radius: 0;
+      background-color: #f9f9f9;
+      font-size: 18px;
+      color: #000;
+      padding-left: 0; }
+      .search-box .form-control:focus {
+        box-shadow: none; }
+    .search-box button {
+      background-color: transparent;
+      border: none;
+      z-index: 5; }
+  
+  .tstbite-feature {
+    display: flex;
+    padding-top: 25px; }
+    .tstbite-feature a {
+      margin-left: 35px; }
+  
+  .overlay-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .overlay-box a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%; }
+  
+  /* 5. Tastebite Blog Page CSS */
+  hr {
+    opacity: 0.1; }
+  
+  .blog-detail hr {
+    margin: 20px 0; }
+  .blog-detail p {
+    font-size: 20px;
+    line-height: 37px; }
+  .blog-detail .blockquote-footer {
+    color: #000;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 0; }
+  
+  .write-comment textarea {
+    background-color: transparent;
+    border: none;
+    resize: none;
+    color: #000;
+    width: 80%;
+    height: 265px; }
+    .write-comment textarea:focus {
+      box-shadow: none;
+      background-color: transparent; }
+  
+  /* 5. 1. Tastebite Media CSS */
+  .media-box {
+    padding: 70px; }
+    .media-box p {
+      font-size: 20px;
+      line-height: 37px; }
+  
+  .tstbite-media-links li a {
+    color: #7F7F7F;
+    font-size: 12px; }
+    .tstbite-media-links li a:hover {
+      color: #568203; }
+    .tstbite-media-links li a svg {
+      margin-right: 3px; }
+  .tstbite-media-links li + li {
+    margin-left: 25px; }
+  
+  .comment-item .media {
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 30px;
+    margin-bottom: 35px;
+    padding-top: 10px; }
+  .comment-item ol.list-unstyled {
+    padding-left: 150px; }
+  
+  /* 6. Tastebite Recipe Page CSS */
+  .Nutrition-list {
+    padding-top: 5px; }
+    .Nutrition-list li {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 6px 0; }
+      .Nutrition-list li span {
+        color: #303030;
+        font-size: 16px;
+        width: 50%;
+        font-weight: 300; }
+        .Nutrition-list li span + span {
+          font-weight: 400;
+          color: #000;
+          text-align: right; }
+      .Nutrition-list li + li {
+        border-top: 1px solid #E8E8E8; }
+  
+  .recipe-component p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300; }
+  .recipe-component .custom-input-group {
+    flex-direction: column;
+    position: relative; }
+    .recipe-component .custom-input-group .form-control {
+      width: 100%;
+      height: 48px;
+      font-size: 14px;
+      background-repeat: no-repeat;
+      background-position: left 15px center;
+      padding-left: 48px;
+      margin-bottom: 0;
+      border-radius: 4px; }
+      .recipe-component .custom-input-group .form-control:focus {
+        border-color: #000000; }
+    .recipe-component .custom-input-group .input-group-append {
+      margin: 15px 0;
+      border: none; }
+      .recipe-component .custom-input-group .input-group-append .btn {
+        border-radius: 4px;
+        width: 100%;
+        height: 48px; }
+  
+  .recipe-component.search .custom-input-group .form-control:focus {
+    border-color: #000000 !important; }
+  
+  .recipe-component.search .form-control {
+    padding-left: 0.75rem;
+    padding-right: 48px;
+    background-position: right 15px center; }
+  
+  /* 6. 1. Tastebite Component List Page CSS */
+  .component-list {
+    margin: 0 -30px; }
+    .component-list li {
+      padding: 5px 30px; }
+      .component-list li small, .component-list li .small {
+        font-size: 12px;
+        color: #7F7F7F;
+        text-transform: uppercase;
+        display: block;
+        line-height: 11px; }
+      .component-list li span {
+        font-size: 14px;
+        color: #000;
+        text-transform: uppercase; }
+      .component-list li + li {
+        border-left: 1px solid #E8E8E8; }
+    .component-list.color-list li {
+      padding: 20px 30px; }
+      .component-list.color-list li + li {
+        border-left: none; }
+  
+  /* 6. 2. Tastebite Custom Control CSS  */
+  .checklist {
+    margin-top: 24px; }
+    .checklist strong {
+      font-weight: 600;
+      font-size: 18px; }
+  
+  .form-check-input {
+    cursor: pointer; }
+  
+  .form-check-label {
+    font-size: 18px; }
+  
+  .recipe-checkbox.form-check.form-check-rounded .form-check-input {
+    border-radius: 50%; }
+  .recipe-checkbox.form-check .form-check-input {
+    width: 24px;
+    height: 24px;
+    margin-left: -40px;
+    margin-top: 0;
+    border-color: #000;
+    border-width: 2px; }
+    .recipe-checkbox.form-check .form-check-input:focus {
+      box-shadow: none; }
+  .recipe-checkbox.form-check .form-check-input:checked[type="checkbox"] {
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-color: transparent;
+    border: none;
+    border-radius: unset; }
+  .recipe-checkbox.form-check .form-check-input:checked ~ .form-check-label {
+    text-decoration: line-through;
+    color: #7F7F7F; }
+    .recipe-checkbox.form-check .form-check-input:checked ~ .form-check-label::after {
+      width: 35px !important;
+      left: -44px !important; }
+  
+  .recipe-checkbox .form-check-input:checked ~ .custom-control-label::before {
+    background-color: transparent;
+    border-color: transparent; }
+  
+  .recipe-checkbox.form-check {
+    margin-top: 25px;
+    padding-left: 40px; }
+  
+  .form-check.sm {
+    min-height: 1px; }
+    .form-check.sm.form-check-rounded .form-check-input {
+      border-radius: 50%; }
+    .form-check.sm:not(.custom-control-sm):not(.custom-switch) {
+      padding-left: 25px; }
+      .form-check.sm:not(.custom-control-sm):not(.custom-switch) .form-check-input {
+        width: 16px;
+        height: 16px;
+        border-width: 1px;
+        border-color: #000; }
+        .form-check.sm:not(.custom-control-sm):not(.custom-switch) .form-check-input:focus {
+          box-shadow: none; }
+        .form-check.sm:not(.custom-control-sm):not(.custom-switch) .form-check-input:checked[type="checkbox"] {
+          border-color: #568203; }
+  
+  .form-check.sm .form-check-label {
+    font-size: 16px; }
+  
+  .custom-control {
+    min-height: 1px; }
+    .custom-control:not(.custom-control-sm):not(.custom-switch) {
+      padding-left: 40px; }
+      .custom-control:not(.custom-control-sm):not(.custom-switch) .custom-control-label:before, .custom-control:not(.custom-control-sm):not(.custom-switch) .custom-control-label:after {
+        top: 2px;
+        left: -40px;
+        width: 24px;
+        height: 24px; }
+    .custom-control .custom-control-label {
+      display: inline-block;
+      font-size: 18px; }
+      .custom-control .custom-control-label:before {
+        background: none;
+        border-radius: 3px;
+        border-width: 2px;
+        border-color: #000; }
+    .custom-control:not(.custom-switch) .custom-control-input:disabled ~ .custom-control-label:before, .custom-control:not(.custom-switch) .custom-control-input[disabled] ~ .custom-control-label:before {
+      background: none;
+      opacity: 0.15; }
+    .custom-control.custom-control-sm .custom-control-label:before, .custom-control.custom-control-sm .custom-control-label:after {
+      top: 2px; }
+    .custom-control.custom-control-lg[class*="custom-"] {
+      padding-left: 34px; }
+    .custom-control.custom-control-rounded .custom-control-label:before, .custom-control.custom-control-rounded .custom-control-label:after {
+      border-radius: 100%; }
+    .custom-control.custom-control-square .custom-control-label:before {
+      border-radius: 0; }
+    .custom-control.custom-control-lg[class*="custom-"] {
+      font-size: 20px; }
+  
+  .custom-switch.custom-switch-lg[class*="custom-"] {
+    font-size: 20px; }
+  
+  .custom-control.custom-control-lg[class*="custom-"] .custom-control-label:before, .custom-control.custom-control-lg[class*="custom-"] .custom-control-label:after {
+    top: 3px;
+    left: -34px;
+    width: 24px;
+    height: 24px; }
+  
+  /* 6. 3. Tastebite Instruction List CSS */
+  .instruction-list {
+    padding-top: 15px; }
+    .instruction-list li {
+      font-size: 18px;
+      padding-left: 40px;
+      position: relative;
+      padding-right: 30px; }
+      .instruction-list li span {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        background-color: #568203;
+        font-weight: 500;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        line-height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+      .instruction-list li + li {
+        margin-top: 30px; }
+  
+  /* 7. Tastebite Category Page CSS */
+  .desserts-box sup {
+    font-size: 16px;
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: normal; }
+  .desserts-box p {
+    font-size: 16px; }
+  
+  /* 8. Tastebite About Page CSS */
+  .about-detail p {
+    font-size: 24px;
+    line-height: 38px; }
+  
+  .mate-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+    -ms-transition: all 600ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+    transition: all 600ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+    z-index: 1;
+    border-radius: 50%; }
+  
+  /* 8. 1. Tastebite Team CSS */
+  .team-box {
+    margin-bottom: 40px; }
+    .team-box .team-circle {
+      position: relative; }
+    .team-box:hover .mate-info {
+      top: auto;
+      bottom: 0;
+      height: 100%;
+      opacity: 1; }
+    .team-box .mate-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      opacity: 0;
+      -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+      -ms-transition: all 600ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+      transition: all 600ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+      z-index: 1; }
+      .team-box .mate-info a {
+        width: 28px;
+        height: 28px;
+        background: #fff;
+        margin: 2px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center; }
+        .team-box .mate-info a img {
+          width: 16px;
+          height: 16px; }
+  
+  .team-circle {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block; }
+  
+  /* 9. Tastebite Documentation Page CSS */
+  .tstbite-documentation .tstbite-aside .menu-category li a[aria-expanded="true"] .icon-rotate {
+    transition: all ease .4s; }
+  
+  .tstbite-documentation .tstbite-aside .menu-category li a[aria-expanded="true"] .icon-rotate {
+    transform: rotate(180deg); }
+  
+  .tstbite-documentation .doc-header.position-fixed {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10; }
+  
+  .tstbite-documentation .row.has-height > .tstbite-aside {
+    top: 72px;
+    left: 0;
+    z-index: 4; }
+  
+  .tstbite-documentation .row.has-height > .tstbite-aside .tstbite-aside-body {
+    height: calc(100vh - 72px); }
+  
+  .tstbite-documentation h4, .tstbite-documentation .h4, .tstbite-documentation .h4 {
+    font-size: 30px; }
+  .tstbite-documentation h6, .tstbite-documentation .h6, .tstbite-documentation .h6 {
+    font-size: 22px; }
+  .tstbite-documentation h5, .tstbite-documentation .h5, .tstbite-documentation .h5 {
+    font-size: 26px; }
+  
+  .copy-clipboard {
+    position: relative;
+    z-index: 1; }
+  
+  /* 9. 1. Tastebite Docs Content CSS */
+  .tstbite-docs-content {
+    margin-left: 251px;
+    margin-top: 72px;
+    width: calc(80% - 251px); }
+    .tstbite-docs-content a:not(.btn) {
+      color: #568203; }
+  
+  .token.tag, .token.keyword {
+    color: #2f6f9f; }
+  
+  .token.attr-name {
+    color: #4f9fcf; }
+  
+  .token.attr-value, .token.string {
+    color: #d44950; }
+  
+  .token.comment {
+    color: #cccccc; }
+  
+  .token.doctype {
+    color: #17a2b8; }
+  
+  .code-box-copy__tooltip {
+    background-color: #000;
+    color: #fff; }
+  
+  /* 9. 2. Tastebite Aside CSS  */
+  .tstbite-aside {
+    width: 251px;
+    background-color: #fff; }
+  
+  .has-aside {
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
+    .has-aside .fabrx-aside-footer {
+      margin-top: auto;
+      margin-bottom: 30px; }
+  
+  .tstbite-aside-xl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: all ease .5s;
+    z-index: 3; }
+  
+  .aside-open .tstbite-aside {
+    transform: translateX(0); }
+  
+  .tstbite-aside-header {
+    background-color: #FAFAFB;
+    padding: 20px 32px;
+    min-height: 80px;
+    display: flex;
+    align-items: center; }
+  
+  .tstbite-aside .tstbite-aside-body {
+    height: calc(100vh - 152px); }
+  
+  .font-size-12 {
+    font-size: 12px; }
+  
+  .tstbite-menu-category {
+    padding: 25px 0 10px; }
+    .tstbite-menu-category > .menu-category-title {
+      padding: 10px 32px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #e4f1ff; }
+  
+  .menu-category > li > a {
+    font-size: 14px;
+    font-weight: 500;
+    border-left: 5px solid #fff;
+    padding: 18px 27px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; }
+    .menu-category > li > a > span + svg {
+      margin-left: auto; }
+  .menu-category li a:hover, .menu-category li.active > a {
+    background-color: #fff6f3;
+    border-color: #568203;
+    color: #000; }
+  .menu-category li a.mPS2id-clicked {
+    background-color: #fff6f3;
+    border-color: #568203;
+    color: #000; }
+  .menu-category .menu-category > li .menu-category > li > a {
+    padding: 10px 15px 10px 38px; }
+  
+  /* 10. Tastebite Templates Page CSS */
+  .card .card-img-overlay {
+    padding: 25px; }
+    .card .card-img-overlay.card-overlay-show {
+      opacity: 0;
+      transition: all ease .4s; }
+  .card:hover .card-img-overlay.card-overlay-show {
+    opacity: 1; }
+  
+  .overlay-wrap {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
+  
+  /* Tastebite Responsive CSS */
+  @media screen and (max-width: 1340px) {
+    .tstbite-overlay .card-img-overlay .tstbite-container {
+      padding: 0 30px; }
+  
+    .tstbite-docs-content {
+      width: calc(100% - 251px); } }
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 1140px; } }
+  @media screen and (max-width: 1199px) {
+    .tstbite-collection h5, .tstbite-collection .h5, .tstbite-collection h6, .tstbite-collection .h6 {
+      font-size: 30px; }
+  
+    .tstbite-collection h6 br, .tstbite-collection .h6 br {
+      display: none; }
+  
+    .tstbite-overlay .card-img-overlay .tstbite-container {
+      padding: 0; }
+  
+    .tstbite-aside-lg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 100%;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: all ease .5s;
+      z-index: 3; }
+  
+    .tstbite-documentation .row.has-height > .tstbite-aside {
+      top: 72px;
+      left: 0;
+      z-index: 4; }
+  
+    .tstbite-docs-content {
+      margin-left: 0;
+      width: calc(100% - 0px); }
+  
+    .manage-page {
+      overflow: hidden; }
+  
+  
+    .tstbite-overlay .card-img-overlay .tstbite-container {
+      padding: 0 40px;
+      bottom: 30px; }
+      .tstbite-overlay .card-img-overlay .tstbite-container h4.h1, .tstbite-overlay .card-img-overlay .tstbite-container .h1.h4 {
+        font-size: 46px; }
+  
+    .component-list {
+      margin: 0 -20px; }
+      .component-list li {
+        padding: 5px 20px; }
+  
+    .instruction-list li {
+      padding-right: 20px; }
+  
+    .about-detail h2, .about-detail .h2 {
+      font-size: 46px; }
+    .about-detail p {
+      font-size: 20px;
+      line-height: 30px; }
+  
+    .component-list.color-list {
+      margin: 0 -15px; }
+      .component-list.color-list li {
+        padding: 20px; }
+  
+    .color-shade-lg {
+      width: 140px;
+      height: 140px; }
+  
+  
+    h5.h3, .h3.h5, h5.h2, .h2.h5, h4, .h4, h6, .h6 {
+      font-size: 24px; }
+  
+  
+    .tstbite-footer ul {
+      display: none; }
+  
+    .tstbite-footer [class*="col-"] ~ [class*="col-"] + [class*="col-"] h6, .tstbite-footer [class*="col-"] ~ [class*="col-"] + [class*="col-"] .h6 {
+      border-top: 1px solid #E8E8E8;
+      padding-top: 20px;
+      margin-top: 3px; }
+  
+    .tstbite-footer hr {
+      margin-top: 0; }
+  
+    .tastebite-footer-contnet {
+      padding-bottom: 30px; }
+  
+  
+    .rounded-sm-top-6 {
+      border-radius: 6px 6px 0 0; }
+  
+    .tstbite-header-links a svg {
+      max-width: 20px; }
+  
+    .tstbite-overlay .card-img-overlay .tstbite-container {
+      padding: 0px;
+      bottom: 30px; }
+      .tstbite-overlay .card-img-overlay .tstbite-container h4.h1, .tstbite-overlay .card-img-overlay .tstbite-container .h1.h4 {
+        font-size: 33px; }
+  
+    .media-box {
+      padding: 30px 30px 10px; }
+  
+    .comment-item ol.list-unstyled {
+      padding-left: 60px; }
+  
+    .blog-detail p {
+      font-size: 14px;
+      line-height: 23px; }
+  
+    .blockquote h2, .blockquote .h2 {
+      font-size: 45px; }
+  
+    .blog-detail .blockquote-footer {
+      font-size: 16px; }
+  
+    .overlay-box a svg {
+      width: 56px;
+      height: 56px; }
+  
+    .media-box p {
+      font-size: 14px;
+      line-height: 23px; }
+  
+    .border-bottom h2, .border-bottom .h2 {
+      font-size: 30px; }
+  
+    .write-comment textarea {
+      width: 100%;
+      height: 250px; }
+  
+    .instruction-list {
+      margin-bottom: 70px; }
+  
+    .desserts-box sup {
+      font-size: 10px; }
+    .desserts-box p {
+      font-size: 10px; }
+    .desserts-box .sort-filter {
+      float: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end; }
+      .desserts-box .sort-filter span {
+        font-size: 10px;
+        padding-right: 10px; }
+      .desserts-box .sort-filter .form-control {
+        background-size: 12px;
+        font-size: 12px;
+        line-height: 14px;
+        width: 106px;
+        height: 28px;
+        min-width: 106px; }
+    .desserts-box h5 > img, .desserts-box .h5 > img {
+      max-width: 24px; }
+  
+    .about-detail h2, .about-detail .h2, .about-detail ~ div h2, .about-detail ~ div .h2 {
+      font-size: 24px; }
+    .about-detail p {
+      font-size: 14px;
+      line-height: 23px; }
+  
+    .modal-content {
+      padding: 25px; }
+  
+    .modal-body {
+      padding: 0; }
+  
+    .close ~ .modal-body {
+      padding-top: 30px; }
+  
+    .btn-md-block {
+      display: block; }
+  
+    .header-topbar {
+      background-color: transparent !important;
+      border-top: 1px solid #E8E8E8;
+      margin-top: 20px; }
+      .header-topbar .col-6 {
+        padding-left: 0;
+        padding-right: 0; }
+      .header-topbar .container {
+        padding: 0; }
+        .header-topbar .container .row {
+          margin: 0; }
+  
+    .icons-list.component-list {
+      margin: 0 -15px; }
+  
+    .doc-header {
+      padding-top: 9px;
+      padding-bottom: 9px; }
+  
+    .copy-clipboard {
+      clear: both;
+      padding-top: 10px; }
+  
+    .block-menu ul {
+      display: block; } }
+  @media screen and (max-width: 575px) {
+    h4, .h4, .h4 {
+      font-size: 30px; }
+  
+    big, .big {
+      font-size: 14px; }
+  
+    caption, .caption {
+      font-size: 10px !important; }
+  
+    h5, .h5, .h5 {
+      font-size: 24px; }
+  
+    h6, .h6, .h6 {
+      font-size: 20px; }
+  
+    h2.h1, .h1.h2 {
+      font-size: 36px; }
+  
+    .f-size-24 {
+      font-size: 16px; }
+  
+    .btn {
+      font-weight: 500; }
+  
+    .custom-input-group {
+      flex-direction: column; }
+      .custom-input-group .form-control {
+        width: 100%;
+        height: 48px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding-left: 15px;
+        border-radius: 4px !important; }
+      .custom-input-group .input-group-append {
+        border: 0;
+        margin-left: 0; }
+        .custom-input-group .input-group-append .btn {
+          width: 100%;
+          height: 48px;
+          font-weight: 500;
+          border-radius: 4px; }
+  
+    .tstbite-join-section .custom-input-group .form-control {
+      width: 100%;
+      height: 48px; }
+  
+    .tstbite-arrow {
+      position: relative;
+      bottom: 10px;
+      right: 0;
+      margin-left: auto; }
+  
+    .tstbite-footer .caption {
+      font-size: 14px !important;
+      padding-bottom: 5px;
+      padding-top: 13px !important; }
+  
+    .tstbite-category-title {
+      font-size: 14px; }
+  
+    .tstbite-overlay .card-img-overlay .tstbite-container {
+      padding: 0 45px;
+      bottom: 20px; }
+      .tstbite-overlay .card-img-overlay .tstbite-container h4.h1, .tstbite-overlay .card-img-overlay .tstbite-container .h1.h4 {
+        font-size: 33px; }
+  
+    .swiper-container .swiper-button-prev, .swiper-container .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      transform: initial;
+      left: 0;
+      width: 33px;
+      height: 33px;
+      background-color: rgba(255, 255, 255, 0.7);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px; }
+      .swiper-container .swiper-button-prev:hover, .swiper-container .swiper-button-next:hover {
+        background-color: #fff; }
+    .swiper-container .swiper-button-next {
+      right: 0;
+      left: auto;
+      background-repeat: no-repeat; }
+  
+    .tstbite-feature {
+      padding-top: 0;
+      justify-content: flex-end; }
+      .tstbite-feature a {
+        margin-left: 18px; }
+        .tstbite-feature a svg {
+          width: 20px;
+          height: 20px; }
+  
+    .tstbite-feature.pt-0 {
+      margin-bottom: -23px; }
+  
+    .checklist strong {
+      font-size: 14px; }
+  
+    .recipe-checkbox.custom-control {
+      margin-top: 20px; }
+      .recipe-checkbox.custom-control .custom-control-label {
+        font-size: 14px; }
+  
+    .custom-control:not(.custom-control-sm):not(.custom-switch) {
+      padding-left: 26px; }
+      .custom-control:not(.custom-control-sm):not(.custom-switch) .custom-control-label:before, .custom-control:not(.custom-control-sm):not(.custom-switch) .custom-control-label:after {
+        top: 2px;
+        left: -26px;
+        width: 16px;
+        height: 16px; }
+    .custom-control .custom-control-label::before {
+      border-width: 1px; }
+  
+    .recipe-checkbox.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+      background-size: 16px;
+      width: 35px !important;
+      left: -29px !important;
+      height: 19px !important;
+      top: 0; }
+  
+    .instruction-list li {
+      font-size: 14px;
+      line-height: 23px;
+      padding-right: 0;
+      padding-left: 35px; }
+  
+    .f-size-20 {
+      font-size: 16px; }
+  
+    h2, .h2 {
+      font-size: 30px; }
+  
+    .custom-control.sm .custom-control-label {
+      font-size: 12px; }
+  
+    .custom-control.sm {
+      min-height: 1px; }
+      .custom-control.sm:not(.custom-control-sm):not(.custom-switch) {
+        padding-left: 18px;
+        margin-top: 2px; }
+        .custom-control.sm:not(.custom-control-sm):not(.custom-switch) .custom-control-label:before, .custom-control.sm:not(.custom-control-sm):not(.custom-switch) .custom-control-label:after {
+          top: 4px;
+          left: -18px;
+          width: 12px;
+          height: 12px;
+          border-width: 1px; }
+  
+    .desserts-box small.font-size-16, .desserts-box .font-size-16.small {
+      font-size: 12px; }
+    .desserts-box .tstbite-svg a svg {
+      width: 12px;
+      height: 12px; }
+  
+    .btn-lg, .btn-group-lg > .btn {
+      height: 32px;
+      font-size: 14px;
+      line-height: 13px; }
+  
+    .modal-content h6, .modal-content .h6 {
+      font-size: 24px; }
+    .modal-content .btn-lg, .modal-content .btn-group-lg > .btn {
+      height: 45px;
+      font-size: 18px;
+      line-height: 24px; }
+  
+    .tstbite-sm-profile img {
+      width: 48px;
+      height: 48px; }
+  
+    .form-group.custom-form-group {
+      margin-bottom: 25px; }
+  
+    .team-box h6, .team-box .h6 {
+      font-size: 14px; }
+    .team-box small, .team-box .small {
+      font-size: 10px;
+      line-height: 12px;
+      display: block;
+      margin-top: 5px; }
+  
+    .group-list, .component-list.group-list {
+      margin: 0;
+      padding-left: 25px; }
+      .group-list li, .component-list.group-list li {
+        padding: 15px 0;
+        margin-left: -25px; }
+  
+    .tstbite-masonry .masonry-item {
+      width: 50%; }
+  
+    .circle-xl {
+      width: 180px;
+      height: 180px; } }
+  @media screen and (max-width: 479px) {
+    h1, .h1, .h1 {
+      font-size: 60px; }
+  
+    .tstbite-overlay .card-img-overlay .tstbite-container h4.h1, .tstbite-overlay .card-img-overlay .tstbite-container .h1.h4 {
+      font-size: 24px; }
+  
+    .component-list {
+      margin: 0 -8px; }
+      .component-list li {
+        padding: 5px 8px; }
+  
+    .color-shade-lg {
+      width: 120px;
+      height: 120px; }
+  
+    .icons-list.component-list {
+      margin: 0 -10px; }
+      .icons-list.component-list li {
+        padding: 15px 10px;
+        min-width: 62px; }
+  
+    .tstbite-section {
+      padding: 50px 0; }
+  
+    .tstbite-header-links .btn {
+      font-size: 13px; }
+  
+  
+    .badge.circle-lg {
+      width: 42px;
+      height: 42px; }
+      .badge.circle-lg svg {
+        width: 13px;
+        height: 13px; }
+  
+    .tstbite-masonry {
+      margin: 0 -6px; }
+      .tstbite-masonry .masonry-item {
+        padding: 6px;
+        width: 50%; }
+  
+    .circle-xl {
+      width: 130px;
+      height: 130px; } }
+    
+  .container2 {
+    margin-top:5%;
+  }
+  
+  .drag-area {
+  height: 400px;
+  border: 3px dashed #e0eafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px auto;
+  }
+  
+  h3 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  }
+  
+  .drag-area .icon {
+  font-size: 50px;
+  color: #1683ff;
+  }
+  
+  .drag-area .header {
+  font-size: 20px;
+  font-weight: 500;
+  color: #34495e;
+  }
+  
+  .drag-area .support {
+  font-size: 12px;
+  color: gray;
+  margin: 10px 0 15px 0;
+  }
+  
+  .drag-area .button {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1683ff;
+  cursor: pointer;
+  }
+  
+  .drag-area.active {
+  border: 2px solid #1683ff;
+  }
+  
+  .drag-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  .download {
+  background-color:#4CAF50;
+  border: none;
+  color: white;
+  padding: 6px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 3px 1px;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  }
+
+  
+  .card {
+    background-image: url(cheesecake.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 
+      1px 3px 3px rgba(0,0,0,0.2),
+      -1px -1px 4px rgba(0,0,0,0.2);
+    height: 300px;
+    position: relative;
+    transition: box-shadow 130ms ease-in-out;
+    width: 355px;
+  }
+  
+  .card:hover {
+    box-shadow: 
+      2px 6px 6px rgba(0,0,0,0.2),
+      -1px -1px 7px rgba(0,0,0,0.2);
+  }
+  
+  .rating {
+    padding: 0.75em;
+  }
+  
+  .rating .star {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .rating .star:before {
+    background-color: rgba(0,0,0,0.05);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+    content: '';
+    height: 12px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: 12px;
+    z-index: 0;
+    border-radius: 50%;
+  }
+  
+  
+  .rating .star svg {
+    fill: white;
+    height: 1em;
+    position: relative;
+    width: 1em;
+    z-index: 1;
+  }
+  
+  .star.no-fill svg{
+    fill: none;
+  }
+  
+  .favorite {
+    transition: all 111ms ease-in-out;
+  }
+  
+  .favorite svg {
+    fill: none;
+    height: 1em;
+    padding: 1px;
+    transition: all 111ms ease-in-out;
+    stroke: lightgray;
+    stroke-width: 12;
+    width: 1em;
+  }
+  
+  .favorite:hover svg {
+    cursor: pointer;
+    stroke: tomato;
+  }
+  
+  .favorite.js-is-selected svg {
+    fill: tomato;
+    stroke: tomato;
+  }
+  
+  .food-info {
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    padding: 1em 2em 2em 1em;
+    position: absolute;
+    right: 0;
+  }
+  
+  .food-info p {
+    margin: 0;
+  }
+  
+  .food-info p span {
+    color: gray;
+    font-size: 14px;
+  }
+  
+  .food-info .favorite {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  
+  
+  .advanced{
+  
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  
+  .btn-secondary,
+  .btn-secondary:focus,
+  .btn-secondary:active
+  
+  
+  {
+    color: #fff;
+    background-color: #00838f !important;
+    border-color: #00838f !important;
+    box-shadow: none;
+  }
+  
+  
+  .advanced{
+  
+    color: #00838f !important;
+  }
+  
+  .btn {
+  background-color: #568203;
+  color:white;
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 0.75rem 1.5rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 85%;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border: 0;
+  }
+  
+  .searchbar{
+    margin-bottom: auto;
+    margin-top: 15px;
+    height: 50px;
+    background-color: silver;
+    border-radius: 30px;
+    padding: 6px;
+    }
+  
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+  
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:#568203;
+    transition: width 0.4s linear;
+    }
+  
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #568203;
+    }
+  
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:#568203;
+    text-decoration:none;
+    }
+  
+    
